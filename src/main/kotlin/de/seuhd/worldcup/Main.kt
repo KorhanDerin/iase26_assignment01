@@ -242,7 +242,7 @@ private fun showBettingScore(allGroups: List<Group>, betList: MutableList<Bet>) 
     val totalIncorrect = totalMatchesPlayed - totalScore
     println("Total score: $totalScore | Correct vs Incorrect guesses: $totalScore x $totalIncorrect")}
 
-//Print the bet details and result (if the match is played)
+//Check the bet and return the point if its correct (if the match is played)
 private fun checkBet(allMatches: List<Match>, bet: Bet): Boolean? {
 
     val match = allMatches.find { it.matchId == bet.matchId }?: return null
